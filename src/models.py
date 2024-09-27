@@ -50,6 +50,7 @@ class Comment(Base):
     text = Column(String(250), nullable=False)
     commented_at = Column(String(250), nullable=False)
     post = relationship(Post)
+    user = relationship(User)
 
 class Likes(Base):
     __tablename__ = 'likes'
@@ -61,6 +62,7 @@ class Likes(Base):
     text = Column(String(250), nullable=False)
     liked_at = Column(String(250), nullable=False)
     post = relationship(Post)
+    user = relationship(User)
 
 # class Person(Base):
 #     __tablename__ = 'person'
